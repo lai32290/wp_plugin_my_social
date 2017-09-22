@@ -22,16 +22,16 @@ class My_Widget extends WP_Widget
             echo $args['before_widget'] . $title . $args['after_widget'];
 
             echo "<a href='$urlFacebook' target='_blank'>
-                <img src='" . plugin_dir_url(__FILE__) . "/images/facebook.png' alt='Facebook'></a>";
+                <img src='" . plugin_dir_url(__FILE__) . "../images/Facebook.png' alt='Facebook'></a>";
 
             echo "<a href='$urlInstagram' target='_blank'>
-                <img src='" . plugin_dir_url(__FILE__) . "/images/instagram.png' alt='Instagram'></a>";
+                <img src='" . plugin_dir_url(__FILE__) . "../images/Instagram.png' alt='Instagram'></a>";
 
             echo "<a href='$urlTwitter' target='_blank'>
-                <img src='" . plugin_dir_url(__FILE__) . "/images/twitter.png' alt='Twitter'></a>";
+                <img src='" . plugin_dir_url(__FILE__) . "../images/Twitter.png' alt='Twitter'></a>";
 
             echo "<a href='$urlYoutube' target='_blank'>
-                <img src='" . plugin_dir_url(__FILE__) . "/images/youtube.png' alt='Youtube'></a>";
+                <img src='" . plugin_dir_url(__FILE__) . "../images/Youtube.png' alt='Youtube'></a>";
         }
 
         echo $args['after_widget'];
@@ -64,27 +64,27 @@ class My_Widget extends WP_Widget
         $urlTwitter = esc_attr($instance['urlTwitter']);
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>"><?php echo _e('title') ?></label>
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php echo _e('Titulo') ?></label>
             <input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
                 name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>">
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('urlFacebook'); ?>"><?php echo _e('urlFacebook') ?></label>
+            <label for="<?php echo $this->get_field_id('urlFacebook'); ?>"><?php echo _e('Facebook') ?></label>
             <input type="text" class="widefat" id="<?php echo $this->get_field_id('urlFacebook'); ?>"
                 name="<?php echo $this->get_field_name('urlFacebook'); ?>" value="<?php echo $urlFacebook; ?>">
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('urlTwitter'); ?>"><?php echo _e('urlTwitter') ?></label>
+            <label for="<?php echo $this->get_field_id('urlTwitter'); ?>"><?php echo _e('Twitter') ?></label>
             <input type="text" class="widefat" id="<?php echo $this->get_field_id('urlTwitter'); ?>"
                 name="<?php echo $this->get_field_name('urlTwitter'); ?>" value="<?php echo $urlTwitter; ?>">
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('urlYoutube'); ?>"><?php echo _e('urlYoutube') ?></label>
+            <label for="<?php echo $this->get_field_id('urlYoutube'); ?>"><?php echo _e('Youtube') ?></label>
             <input type="text" class="widefat" id="<?php echo $this->get_field_id('urlYoutube'); ?>"
                 name="<?php echo $this->get_field_name('urlYoutube'); ?>" value="<?php echo $urlYoutube; ?>">
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('urlInstagram'); ?>"><?php echo _e('urlInstagram') ?></label>
+            <label for="<?php echo $this->get_field_id('urlInstagram'); ?>"><?php echo _e('Instagram') ?></label>
             <input type="text" class="widefat" id="<?php echo $this->get_field_id('urlInstagram'); ?>"
                 name="<?php echo $this->get_field_name('urlInstagram'); ?>" value="<?php echo $urlInstagram; ?>">
         </p>
