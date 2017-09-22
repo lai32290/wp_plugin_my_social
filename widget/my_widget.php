@@ -51,6 +51,12 @@ class My_Widget extends WP_Widget
 
     public function form($instance)
     {
+        if(!array_key_exists('title', $instance)) $instance['title'] = '';
+        if(!array_key_exists('urlFacebook', $instance)) $instance['urlFacebook'] = '';
+        if(!array_key_exists('urlYoutube', $instance)) $instance['urlYoutube'] = '';
+        if(!array_key_exists('urlInstagram', $instance)) $instance['urlInstagram'] = '';
+        if(!array_key_exists('urlTwitter', $instance)) $instance['urlTwitter'] = '';
+
         $title = esc_attr($instance['title']);
         $urlFacebook = esc_attr($instance['urlFacebook']);
         $urlYoutube = esc_attr($instance['urlYoutube']);
