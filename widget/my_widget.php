@@ -4,12 +4,12 @@ class My_Widget extends WP_Widget
 {
     public function __construct()
     {
-        parent::__construct('my_widget', "Visite minhas redes sociais");
+//        parent::__construct('my_widget', "Visite minhas redes sociais");
+        parent::__construct('my_widget', "This is my first widget");
     }
 
     public function widget($args, $instance)
     {
-        extract($args);
         $title = apply_filters('widget_title', $instance['title']);
         $urlFacebook = $instance['urlFacebook'];
         $urlYoutube = $instance['urlYoutube'];
@@ -63,30 +63,34 @@ class My_Widget extends WP_Widget
         $urlInstagram = esc_attr($instance['urlInstagram']);
         $urlTwitter = esc_attr($instance['urlTwitter']);
         ?>
+<!--        <p>-->
+<!--            <label for="--><?php //echo $this->get_field_id('title'); ?><!--">--><?php //echo _e('Titulo') ?><!--</label>-->
+<!--            <input type="text" class="widefat" id="--><?php //echo $this->get_field_id('title'); ?><!--"-->
+<!--                name="--><?php //echo $this->get_field_name('title'); ?><!--" value="--><?php //echo $title; ?><!--">-->
+<!--        </p>-->
+<!--        <p>-->
+<!--            <label for="--><?php //echo $this->get_field_id('urlFacebook'); ?><!--">--><?php //echo _e('Facebook') ?><!--</label>-->
+<!--            <input type="text" class="widefat" id="--><?php //echo $this->get_field_id('urlFacebook'); ?><!--"-->
+<!--                name="--><?php //echo $this->get_field_name('urlFacebook'); ?><!--" value="--><?php //echo $urlFacebook; ?><!--">-->
+<!--        </p>-->
+<!--        <p>-->
+<!--            <label for="--><?php //echo $this->get_field_id('urlTwitter'); ?><!--">--><?php //echo _e('Twitter') ?><!--</label>-->
+<!--            <input type="text" class="widefat" id="--><?php //echo $this->get_field_id('urlTwitter'); ?><!--"-->
+<!--                name="--><?php //echo $this->get_field_name('urlTwitter'); ?><!--" value="--><?php //echo $urlTwitter; ?><!--">-->
+<!--        </p>-->
+<!--        <p>-->
+<!--            <label for="--><?php //echo $this->get_field_id('urlYoutube'); ?><!--">--><?php //echo _e('Youtube') ?><!--</label>-->
+<!--            <input type="text" class="widefat" id="--><?php //echo $this->get_field_id('urlYoutube'); ?><!--"-->
+<!--                name="--><?php //echo $this->get_field_name('urlYoutube'); ?><!--" value="--><?php //echo $urlYoutube; ?><!--">-->
+<!--        </p>-->
+<!--        <p>-->
+<!--            <label for="--><?php //echo $this->get_field_id('urlInstagram'); ?><!--">--><?php //echo _e('Instagram') ?><!--</label>-->
+<!--            <input type="text" class="widefat" id="--><?php //echo $this->get_field_id('urlInstagram'); ?><!--"-->
+<!--                name="--><?php //echo $this->get_field_name('urlInstagram'); ?><!--" value="--><?php //echo $urlInstagram; ?><!--">-->
+<!--        </p>-->
         <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>"><?php echo _e('Titulo') ?></label>
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
-                name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('urlFacebook'); ?>"><?php echo _e('Facebook') ?></label>
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id('urlFacebook'); ?>"
-                name="<?php echo $this->get_field_name('urlFacebook'); ?>" value="<?php echo $urlFacebook; ?>">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('urlTwitter'); ?>"><?php echo _e('Twitter') ?></label>
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id('urlTwitter'); ?>"
-                name="<?php echo $this->get_field_name('urlTwitter'); ?>" value="<?php echo $urlTwitter; ?>">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('urlYoutube'); ?>"><?php echo _e('Youtube') ?></label>
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id('urlYoutube'); ?>"
-                name="<?php echo $this->get_field_name('urlYoutube'); ?>" value="<?php echo $urlYoutube; ?>">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('urlInstagram'); ?>"><?php echo _e('Instagram') ?></label>
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id('urlInstagram'); ?>"
-                name="<?php echo $this->get_field_name('urlInstagram'); ?>" value="<?php echo $urlInstagram; ?>">
+            <label>Title</label>
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>">
         </p>
     <?php
     }
